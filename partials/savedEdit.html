@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Like...or Not</h1>
+  <div class="row">
+    <img src="http://img.clipartall.com/two-thumbs-up-gif-thumbs-up-thumbs-down-clipart-500_277.jpg" class="center-block img-responsive" alt="thumbs">
+  </div>
+
+  <h1 class="text-left">My Restaurants</h1>
+  <div ng-repeat="item in tasks | filter: searchText.search | filter: false:isCompleted">
+    <div class="panel panel-default">
+      <div class="panel-body">
+<!--         <div class="col-xs-1"><input type="checkbox" name="" ng-model="item.isCompleted" ng-change="updateComplete(item.id)"/></div> -->
+        <div class="col-xs-7"><a ng-href="#!/tasks/{{item.id}}">{{ item.task }}</a></div>
+        <div class="col-xs-2">{{item.dueDate}}</div>
+        <div class="col-xs-1">{{item.assignedTo}}</div>
+        <div class="col-xs-1"><button ng-click="removeTask(item.id)" class="btn btn-danger">delete</button></div>
+      </div>
+    </div>
+  </div>
+</div>
