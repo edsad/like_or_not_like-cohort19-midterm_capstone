@@ -1,4 +1,6 @@
-.DS_Store
 lib/node_modules
-app/values/
+lib/bower_components
+.DS_Store
+lib/.sass-cache
+values/
 css/

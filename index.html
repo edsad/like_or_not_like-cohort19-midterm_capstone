@@ -1,48 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Like...or Not Like</title>
-		<link rel="stylesheet" type="text/css" href="lib/node_modules/angular-material/angular-material.min.css" />
-	    <link rel="stylesheet" type="text/css" href="lib/node_modules/materialize-css/dist/css/materialize.min.css" />
-	    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	   <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <title>Like...or Not Like</title>
 	</head>
-	<body id="LikeOrNotLikeApp">
+<body>
 
-		<div ng-app="LikeOrNotLikeApp">
+  <div ng-app="TodoApp">
+    <div ng-include="'partials/navbar.html'"></div>
 
-			<div ng-include="'partials/navBar.html'"></div>
-			<div ng-view>test</div>
-
-		</div>
-
-	<footer>Like...or Not Like &trade;, &copy; 2017</footer>
+    <div ng-view></div>
+   
+  </div>
 
   <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="./lib/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
   <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
-  <script type="text/javascript" src="./lib/node_modules/angular-animate/angular-animate.min.js"></script>
-  <script type="text/javascript" src="./lib/node_modules/angular-aria/angular-aria.min.js"></script>
-  <script type="text/javascript" src="./lib/node_modules/angular-material/angular-material.min.js"></script>
-  <script type="text/javascript" src="./lib/node_modules/angular-messages/angular-messages.min.js"></script>
   <script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
 
   <script type="text/javascript" src="./app/app.js"></script>
-  <script type="text/javascript" src="/app/values/fb-creds.js"></script>
-
-    <!-- FACTORIES -->
-  <script type="text/javascript" src="app/factories/authFactory.js"></script>
-  <script type="text/javascript" src="app/factories/dataFactory.js"></script>
-
-    <!-- CONTROLLERS -->
-  <script type="text/javascript" src="app/controllers/authCtrl.js"></script>
-  <script type="text/javascript" src="app/controllers/navBarCtrl.js"></script>
-  <script type="text/javascript" src="app/controllers/new_addCtrl.js"></script>
-  <script type="text/javascript" src="app/controllers/saved_allCtrl.js"></script>
-  <script type="text/javascript" src="app/controllers/saved_editCtrl.js"></script>
-  <script type="text/javascript" src="app/controllers/saved_homeCtrl.js"></script>
-  <script type="text/javascript" src="app/controllers/searchCtrl.js"></script>
+  <script type="text/javascript" src="./app/values/FB-Creds.js"></script>
+  <!--Factories-->
+  <script type="text/javascript" src="./app/factories/authFactory.js"></script>
+  <script type="text/javascript" src="./app/factories/dataFactory.js"></script>
+  <script type="text/javascript" src="./app/factories/filterFactory.js"></script>
+  <!--Controllers-->
+  <script type="text/javascript" src="./app/controllers/addTaskCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/authCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/editTaskCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/navCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/taskDetailCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/taskListCtrl.js"></script>
+</body>
+</html>
 
 
 	</body>
