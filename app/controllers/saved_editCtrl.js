@@ -3,10 +3,10 @@
 app.controller('Saved_EditCtrl', function($scope, $routeParams, DataFactory, $location) {
   
   $scope.task = {
-  	assignedTo: "",
-  	dependencies: "",
-  	dueDate: "",
-  	urgency: "",
+  	meal: "",
+  	beverage: "",
+  	date: "",
+  	timeOfDay: "",
   	description: "",
   	isCompleted: "",
   	task: ""
@@ -22,7 +22,7 @@ app.controller('Saved_EditCtrl', function($scope, $routeParams, DataFactory, $lo
     // stuff goes here
     DataFactory.editTask($routeParams.taskId, $scope.task)
     .then( (response) => {
-    	$location.path("/task-list");
+    	$location.path("/saved_all");
     });
     console.log("task", $scope.task);
     console.log("You clicked the edit task button!");

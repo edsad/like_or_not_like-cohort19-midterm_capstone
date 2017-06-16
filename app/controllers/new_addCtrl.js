@@ -5,13 +5,13 @@ app.controller('New_AddCtrl', function($scope, DataFactory, $location, AuthFacto
 let user = AuthFactory.getUser();
 
   $scope.task = {
-    assignedTo: "",
-    dependencies: "",
-    dueDate: "",
+    meal: "",
+    beverage: "",
+    date: "",
   	isCompleted: false,
     location: "",
     task: "",
-    urgency: "",
+    timeOfDay: "",
     uid: user
   };
 
@@ -20,7 +20,7 @@ let user = AuthFactory.getUser();
     console.log("$scope.task", $scope.task);
     DataFactory.addTask($scope.task)
     .then ( (data) => {
-    	$location.path("/task-list");
+    	$location.path("/savedAll");
     });
   };
 
