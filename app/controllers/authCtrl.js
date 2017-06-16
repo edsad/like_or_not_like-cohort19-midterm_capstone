@@ -12,10 +12,10 @@ app.controller("AuthCtrl", function ($scope, $window, AuthFactory, $location) {
   let logout = () => {
     console.log("logout clicked");
     AuthFactory.logoutUser()
-      .then(function (data) {
+      .then(function ( data ) {
         console.log("logged out?", data);
         $window.location.url = "#!/login";
-      }, function (error) {
+      }, function ( error ) {
         console.log("error occured on logout");
       });
   };
@@ -31,10 +31,10 @@ app.controller("AuthCtrl", function ($scope, $window, AuthFactory, $location) {
       email: $scope.account.email,
       password: $scope.account.password
     })
-      .then((userData) => {
+      .then(( userData ) => {
         console.log("UserCtrl newUser:", userData);
         $scope.login();
-      }, (error) => {
+      }, ( error ) => {
         console.log("Error creating user:", error);
       });
   };
@@ -54,13 +54,13 @@ app.controller("AuthCtrl", function ($scope, $window, AuthFactory, $location) {
   $scope.loginGoogle = () => {
     console.log("you clicked login with Google");
     AuthFactory.authWithProvider()
-      .then(function (result) {
+      .then(function ( result ) {
         var user = result.user.uid;
         console.log("logged in user:", user);
         //Once logged in, go to another view
         $location.path("/savedAll");
         $scope.$apply();
-      }).catch(function (error) {
+      }).catch(function ( error ) {
         // Handle the Errors.
         console.log("error with google login", error);
         var errorCode = error.code;

@@ -7,7 +7,7 @@ app.controller('NavBarCtrl', function ($scope, AuthFactory, $window, SearchTermD
   $scope.isLoggedIn = false;
   $scope.searchText = SearchTermData;
 
-  firebase.auth().onAuthStateChanged(function (user) {
+  firebase.auth().onAuthStateChanged(function ( user ) {
     if (user) {
       $scope.isLoggedIn = true;
       console.log("currentUser logged in", user, $scope.isLoggedIn);
