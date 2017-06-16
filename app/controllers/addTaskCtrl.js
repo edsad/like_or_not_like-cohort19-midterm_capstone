@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('NavBarCtrl', function ($scope, AuthFactory, $window, SearchTermData) {
+app.controller('AddTaskCtrl', function ($scope, AuthFactory, $window, SearchTermData) {
   
   // Log Button Function
 

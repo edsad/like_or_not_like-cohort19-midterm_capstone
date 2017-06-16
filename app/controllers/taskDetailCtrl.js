@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('SearchCtrl', function($scope, $location, $routeParams, DataFactory) {
+app.controller('TaskDetailCtrl', function($scope, $location, $routeParams, DataFactory) {
 
 	console.log("$routeParams", $routeParams);
 	console.log("$routeParams", $routeParams.taskId);

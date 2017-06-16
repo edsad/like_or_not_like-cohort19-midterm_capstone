@@ -35,7 +35,7 @@ app.config( ($routeProvider) => {
 		resolve: {isAuth}
 	})
 	.when('/tasks/newtask', {
-		templateUrl: 'partials/savedAll.html',
+		templateUrl: 'partials/task-list.html',
 		controller: 'NewAddCtrl',
 		resolve: {isAuth}
 	})
@@ -45,7 +45,7 @@ app.config( ($routeProvider) => {
 		resolve: {isAuth}
 	})
 	.when('/tasks/:taskId/edit', {
-		templateUrl: 'partials/savedAll.html',
+		templateUrl: 'partials/task-list.html',
 		controller: 'SavedEditCtrl',
 		resolve: {isAuth}
 	})

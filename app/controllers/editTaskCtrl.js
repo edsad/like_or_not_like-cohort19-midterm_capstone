@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('NewAddCtrl', function($scope, DataFactory, $location, AuthFactory) {
+app.controller('EditTaskCtrl', function($scope, DataFactory, $location, AuthFactory) {
 
 let user = AuthFactory.getUser();
 
@@ -20,7 +20,7 @@ let user = AuthFactory.getUser();
     console.log("$scope.task", $scope.task);
     DataFactory.addTask($scope.task)
     .then ( ( data ) => {
-    	$location.path("/savedAll");
+    	$location.path("/task-list");
     });
   };
 
