@@ -19,7 +19,7 @@ let user = AuthFactory.getUser();
     // stuff goes here
     console.log("$scope.task", $scope.task);
     DataFactory.addTask($scope.task)
-    .then ( (data) => {
+    .then ( ( data ) => {
     	$location.path("/savedAll");
     });
   };

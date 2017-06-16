@@ -9,7 +9,7 @@ app.controller('SearchCtrl', function($scope, $location, $routeParams, DataFacto
     // stuff goes here
     console.log("get task taskin'");
     DataFactory.getTask($routeParams.taskId)
-    .then( (stuff) => {
+    .then( ( stuff ) => {
     	$scope.task = stuff;
     	$scope.task.id = $routeParams.taskId;
 

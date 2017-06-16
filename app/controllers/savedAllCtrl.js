@@ -8,7 +8,7 @@ app.controller('SavedAllCtrl', function($scope, DataFactory, $location, AuthFact
   $scope.getTaskList = function () {
     // get the task list
     DataFactory.getTaskList(user)
-    .then( (tasks) => {
+    .then( ( tasks ) => {
     	$scope.tasks = tasks;
     	console.log("tasks", $scope.tasks);
     });
@@ -22,7 +22,7 @@ app.controller('SavedAllCtrl', function($scope, DataFactory, $location, AuthFact
     });
   };
 
-  $scope.updateComplete = function(whichOne) {
+  $scope.updateComplete = function( whichOne ) {
     let tmpObj = {isCompleted:true};
     DataFactory.editTask(whichOne, tmpObj)
     .then( () => {

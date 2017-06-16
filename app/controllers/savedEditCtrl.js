@@ -13,7 +13,7 @@ app.controller('SavedEditCtrl', function($scope, $routeParams, DataFactory, $loc
   };
 
 	DataFactory.getTask($routeParams.taskId)
-	.then( (stuff) => {
+	.then( ( stuff ) => {
 		$scope.task = stuff;
 		$scope.task.id = $routeParams.taskId;
 	});
@@ -21,7 +21,7 @@ app.controller('SavedEditCtrl', function($scope, $routeParams, DataFactory, $loc
   $scope.submitTask = function() {
     // stuff goes here
     DataFactory.editTask($routeParams.taskId, $scope.task)
-    .then( (response) => {
+    .then( ( response ) => {
     	$location.path("/savedAll");
     });
     console.log("task", $scope.task);
