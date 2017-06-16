@@ -3,26 +3,26 @@
 app.factory("DataFactory", function($q, $http, FBCreds) {
 
   const addTask = ( newObj ) => {
-    return $q( (resolve, reject) => {
+    return $q( ( resolve, reject ) => {
       let object = JSON.stringify(newObj);
       $http.post(`${FBCreds.databaseURL}/items.json`, object)
-      .then ( (itemID) => {
+      .then ( ( itemID ) => {
         resolve(itemID);
       })
-      .catch( (error) => {
+      .catch( ( error ) => {
         reject(error);
       });
     });
   };
 
   const editTask = ( taskID, editedObj ) => {
-    return $q( (resolve, reject) => {
+    return $q( ( resolve, reject ) => {
       let newObj = JSON.stringify(editedObj);
       $http.patch(`${FBCreds.databaseURL}/items/${taskID}.json`, newObj)
-      .then( (itemObj) => {
+      .then( ( itemObj ) => {
         resolve(itemObj);
       })
-      .catch( (error) => {
+      .catch( ( error ) => {
         reject(error);
       });
     });
@@ -31,29 +31,29 @@ app.factory("DataFactory", function($q, $http, FBCreds) {
   const getTask = ( taskID ) => {
     return $q( (resolve, reject) => {
       $http.get(`${FBCreds.databaseURL}/items/${taskID}.json`)
-      .then( (itemObj) => {
+      .then( ( itemObj ) => {
         resolve(itemObj.data);
       })
-      .catch( (error) => {
+      .catch( ( error ) => {
         reject(error);
       });
     });
   };
 
-  const getTaskList = (user) => {
+  const getTaskList = ( user ) => {
     let tasks = [];
-    return $q( (resolve, reject) => {
+    return $q( ( resolve, reject ) => {
       $http.get(`${FBCreds.databaseURL}/items.json?orderBy="uid"&equalTo="${user}"`)
-      .then( (itemObj) => {
+      .then( ( itemObj ) => {
         let itemCollection = itemObj.data;
         console.log("itemCollection", itemCollection);
-       Object.keys(itemCollection).forEach( (key) => {
+       Object.keys(itemCollection).forEach( ( key ) => {
           itemCollection[key].id = key;
           tasks.push(itemCollection[key]);
         });
         resolve(tasks);
         })
-      .catch( (error) => {
+      .catch( ( error ) => {
         reject(error);
       });
     });
@@ -62,10 +62,10 @@ app.factory("DataFactory", function($q, $http, FBCreds) {
   const removeTask = ( taskID ) => {
     return $q ( (resolve, reject) => {
       $http.delete(`${FBCreds.databaseURL}/items/${taskID}.json`)
-      .then( (response) => {
+      .then( ( response ) => {
         resolve(response);
       })
-      .catch( (error) => {
+      .catch( ( error ) => {
         reject(error);
       });
     });
