@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('Saved_EditCtrl', function($scope, $routeParams, DataFactory, $location) {
+app.controller('SavedEditCtrl', function($scope, $routeParams, DataFactory, $location) {
   
   $scope.task = {
   	meal: "",
@@ -22,7 +22,7 @@ app.controller('Saved_EditCtrl', function($scope, $routeParams, DataFactory, $lo
     // stuff goes here
     DataFactory.editTask($routeParams.taskId, $scope.task)
     .then( (response) => {
-    	$location.path("/savedAllll");
+    	$location.path("/savedAll");
     });
     console.log("task", $scope.task);
     console.log("You clicked the edit task button!");

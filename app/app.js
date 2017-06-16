@@ -31,12 +31,12 @@ app.config( ($routeProvider) => {
 	})
 	.when('/savedEdit', {
 		templateUrl: 'partials/savedEdit.html',
-		controller: 'Saved_EditCtrl',
+		controller: 'SavedEditCtrl',
 		resolve: {isAuth}
 	})
 	.when('/tasks/newtask', {
 		templateUrl: 'partials/savedAll.html',
-		controller: 'New_AddCtrl',
+		controller: 'NewAddCtrl',
 		resolve: {isAuth}
 	})
 	.when('/tasks/:taskId', {
@@ -45,8 +45,8 @@ app.config( ($routeProvider) => {
 		resolve: {isAuth}
 	})
 	.when('/tasks/:taskId/edit', {
-		templateUrl: 'partials/saved_all.html',
-		controller: 'Saved_EditCtrl',
+		templateUrl: 'partials/savedAll.html',
+		controller: 'SavedEditCtrl',
 		resolve: {isAuth}
 	})
 	.otherwise('/');
