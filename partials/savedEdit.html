@@ -10,8 +10,8 @@
       <div class="panel-body">
 <!--         <div class="col-xs-1"><input type="checkbox" name="" ng-model="item.isCompleted" ng-change="updateComplete(item.id)"/></div> -->
         <div class="col-xs-7"><a ng-href="#!/tasks/{{item.id}}">{{ item.task }}</a></div>
-        <div class="col-xs-2">{{item.dueDate}}</div>
-        <div class="col-xs-1">{{item.assignedTo}}</div>
+        <div class="col-xs-2">{{item.date}}</div>
+        <div class="col-xs-1">{{item.meal}}</div>
         <div class="col-xs-1"><button ng-click="removeTask(item.id)" class="btn btn-danger">delete</button></div>
       </div>
     </div>
