@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('New_AddCtrl', function($scope, DataFactory, $location, AuthFactory) {
+app.controller('NewAddCtrl', function($scope, DataFactory, $location, AuthFactory) {
 
 let user = AuthFactory.getUser();
 
