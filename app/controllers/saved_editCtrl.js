@@ -22,7 +22,7 @@ app.controller('Saved_EditCtrl', function($scope, $routeParams, DataFactory, $lo
     // stuff goes here
     DataFactory.editTask($routeParams.taskId, $scope.task)
     .then( (response) => {
-    	$location.path("/saved_all");
+    	$location.path("/savedAllll");
     });
     console.log("task", $scope.task);
     console.log("You clicked the edit task button!");

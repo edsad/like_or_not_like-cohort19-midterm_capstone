@@ -29,9 +29,9 @@ app.config( ($routeProvider) => {
 		templateUrl: 'partials/auth.html',
 		controller: 'AuthCtrl'
 	})
-	.when('/saved_Edit', {
+	.when('/savedEdit', {
 		templateUrl: 'partials/savedEdit.html',
-		controller: 'Saved_AllCtrl',
+		controller: 'Saved_EditCtrl',
 		resolve: {isAuth}
 	})
 	.when('/tasks/newtask', {
