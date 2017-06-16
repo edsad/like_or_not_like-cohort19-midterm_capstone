@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('SavedAllCtrl', function($scope, DataFactory, $location, AuthFactory, SearchTermData) {
+app.controller('NavCtrl', function($scope, DataFactory, $location, AuthFactory, SearchTermData) {
 
   $scope.searchText = SearchTermData;
   let user = AuthFactory.getUser();
