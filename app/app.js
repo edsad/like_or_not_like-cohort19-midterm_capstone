@@ -29,24 +29,24 @@ app.config( ($routeProvider) => {
 		templateUrl: 'partials/auth.html',
 		controller: 'AuthCtrl'
 	})
-	.when('/savedEdit', {
-		templateUrl: 'partials/savedEdit.html',
-		controller: 'SavedEditCtrl',
+	.when('/task-list', {
+		templateUrl: 'partials/task-list.html',
+		controller: 'TaskListCtrl',
 		resolve: {isAuth}
 	})
 	.when('/tasks/newtask', {
-		templateUrl: 'partials/task-list.html',
-		controller: 'NewAddCtrl',
+		templateUrl: 'partials/task-form.html',
+		controller: 'AddTaskCtrl',
 		resolve: {isAuth}
 	})
 	.when('/tasks/:taskId', {
-		templateUrl: 'partials/newAdd.html',
-		controller: 'SearchCtrl',
+		templateUrl: 'partials/task-detail.html',
+		controller: 'TaskDetailCtrl',
 		resolve: {isAuth}
 	})
 	.when('/tasks/:taskId/edit', {
-		templateUrl: 'partials/task-list.html',
-		controller: 'SavedEditCtrl',
+		templateUrl: 'partials/task-form.html',
+		controller: 'EditTaskCtrl',
 		resolve: {isAuth}
 	})
 	.otherwise('/');
@@ -62,3 +62,4 @@ app.run(($location, FBCreds) => {
 
 	firebase.initializeApp(authConfig);
 });
+
