@@ -3,7 +3,7 @@
   <div class="row">
     <img src="http://img.clipartall.com/two-thumbs-up-gif-thumbs-up-thumbs-down-clipart-500_277.jpg" class="center-block img-responsive" alt="thumbs">
   </div><br>
-  <div class="input-group col-xs-6 col-xs-offset-3">
+  <div class="input-group col-md-6 col-md-offset-3">
     <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon1" ng-model="searchText.search">
     <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
   </div>
@@ -12,11 +12,11 @@
   <div ng-repeat="item in tasks | filter: searchText.search | filter: false:isCompleted">
     <div class="panel panel-default">
       <div class="panel-body">
-<!--         <div class="col-xs-1"><input type="checkbox" name="" ng-model="item.isCompleted" ng-change="updateComplete(item.id)"/></div> -->
-        <div class="col-xs-7"><a ng-href="#!/tasks/{{item.id}}">{{ item.task }}</a></div>
-        <div class="col-xs-2">{{item.meal}}</div>
-        <div class="col-xs-1">{{item.beverage}}</div>
-        <div class="col-xs-1"><button ng-click="removeTask(item.id)" class="btn btn-danger">delete</button></div>
+
+        <div class="col-md-7"><a ng-href="#!/tasks/{{item.id}}">{{ item.task }}</a></div>
+        <div class="col-md-3">{{item.meal}}</div>
+        <div class="col-md-1">{{item.beverage}}</div>
+        <div class="col-md-1"><button ng-click="removeTask(item.id)" class="btn btn-danger">delete</button></div>
       </div>
     </div>
   </div>

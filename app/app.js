@@ -1,15 +1,15 @@
 "use strict";
 
-const app = angular.module('TodoApp', ["ngRoute"]);
+const app = angular.module('LikeOrNot', ["ngRoute"]);
 
 let isAuth = (AuthFactory) => new Promise ( (resolve, reject) => {
 	AuthFactory.isAuthenticated()
 	.then((userExists) => {
 		if(userExists){
-			console.log("Authenticated, go ahead");
+			console.log("Authenticated");
 			resolve();
 		}else {
-			console.log("Authentication reject, go away");
+			console.log("Authentication rejected");
 			reject();
 		}
 	});
