@@ -3,12 +3,11 @@
 app.controller('EditTaskCtrl', function($scope, $routeParams, DataFactory, $location) {
   
   $scope.task = {
-    assignedTo: "",
-    dependencies: "",
-    dueDate: "",
-    urgency: "",
+    meal: "",
+    timeOfDay: "",
+    date: "",
+    beverage: "",
     description: "",
-    isCompleted: "",
     task: ""
   };
 
