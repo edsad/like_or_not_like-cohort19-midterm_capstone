@@ -5,13 +5,12 @@ app.controller('AddTaskCtrl', function($scope, DataFactory, $location, AuthFacto
 let user = AuthFactory.getUser();
 
   $scope.task = {
-    assignedTo: "",
-    dependencies: "",
-    dueDate: "",
-    isCompleted: false,
+    meal: "",
+    timeOfDay: "",
+    date: "",
     location: "",
     task: "",
-    urgency: "",
+    beverage: "",
     uid: user
   };
 
