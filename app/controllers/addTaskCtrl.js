@@ -11,6 +11,7 @@ let user = AuthFactory.getUser();
     location: "",
     task: "",
     beverage: "",
+    info: "",
     uid: user
   };
 
