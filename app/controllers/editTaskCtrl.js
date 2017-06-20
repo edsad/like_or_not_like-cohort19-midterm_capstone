@@ -8,6 +8,7 @@ app.controller('EditTaskCtrl', function($scope, $routeParams, DataFactory, $loca
     date: "",
     beverage: "",
     description: "",
+    info: "",
     task: ""
   };
 
