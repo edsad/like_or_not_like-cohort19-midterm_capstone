@@ -28,12 +28,12 @@
     <input type="text" class="form-control" ng-model="task.meal"></input>
   </div>
 
-    <button type="button" class="btn btn-default btn-sm">
+    <button type="button" ng-click="task.mealLiked=true" ng-class="{liked:task.mealLiked==true}" class="btn btn-default btn-sm">
     <span class="glyphicon glyphicon-thumbs-up"></span> Like</button>
 
 
 
-    <button type="button" class="btn btn-default btn-sm">
+    <button type="button" ng-click="task.mealLiked=false" class="btn btn-default btn-sm" ng-class="{liked:task.mealLiked==false}">
     <span class="glyphicon glyphicon-thumbs-down"></span> Don't Like</button>
     <br><br>
 

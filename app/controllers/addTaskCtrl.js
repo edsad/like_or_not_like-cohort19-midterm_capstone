@@ -12,6 +12,7 @@ let user = AuthFactory.getUser();
     task: "",
     beverage: "",
     info: "",
+    mealLiked: true,
     uid: user
   };
 
@@ -24,7 +25,13 @@ let user = AuthFactory.getUser();
     });
   };
 
+  $scope.mealChanged = function(obj){
+    obj.mealLiked = !obj.mealLiked;
+  }
+
 });
+
+
 
 
 
