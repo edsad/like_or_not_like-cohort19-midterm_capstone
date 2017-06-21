@@ -3,9 +3,10 @@
 	<h3>{{task.task}}</h3>
   <ul class="list-group">
 
-    <li class="list-group-item"><strong>What Did I Eat? </strong>{{task.meal}} <span ng-if="task.mealLiked==true"><span class="glyphicon glyphicon-thumbs-up custom"</span></span><span ng-if="task.mealLiked==false"><span class="glyphicon glyphicon-thumbs-down custom"</span></span></li>
+    <li class="list-group-item"><strong>What Did I Eat? </strong>{{task.meal}}  <span ng-if="task.mealLiked==true"><span class="glyphicon glyphicon-thumbs-up custom"></span></span><span ng-if="task.mealLiked==false"><span class="glyphicon glyphicon-thumbs-down custom"></span></span></li>
 
-    <li class="list-group-item"><strong>What Did I Drink? </strong>{{task.beverage}} <span ng-if="task.beverageLiked==true"><span class="glyphicon glyphicon-thumbs-up custom"</span></span> </li>
+    <li class="list-group-item"><strong>What Did I Drink? </strong>{{task.beverage}}  <span ng-if="task.beverageLiked==true"><span class="glyphicon glyphicon-thumbs-up custom"></span></span><span ng-if="task.beverageLiked==false"><span class="glyphicon glyphicon-thumbs-down custom"></span></span>
+    </li>
 
     <li class="list-group-item"><strong>Date: </strong>{{task.date}}</li>
     <li class="list-group-item"><strong>Location: </strong>{{task.location}}</li>
