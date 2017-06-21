@@ -33,7 +33,7 @@
 
 
 
-    <button type="button" ng-click="task.mealLiked=false" class="btn btn-default btn-sm" ng-class="{liked:task.mealLiked==false}">
+    <button type="button" ng-click="task.mealLiked=false" ng-class="{liked:task.mealLiked==false}" class="btn btn-default btn-sm">
     <span class="glyphicon glyphicon-thumbs-down"></span> Don't Like</button>
     <br><br>
 
@@ -46,11 +46,11 @@
     <input type="text" class="form-control" ng-model="task.beverage"></input>
   </div>
 
-    <button type="button" class="btn btn-default btn-sm">
+    <button type="button" ng-click="task.beverageLiked=true" ng-class="{liked:task.beverageLiked==true}" class="btn btn-default btn-sm">
     <span class="glyphicon glyphicon-thumbs-up"></span> Like</button>
 
 
-    <button type="button" class="btn btn-default btn-sm">
+    <button type="button" ng-click="task.beverageLiked=false" ng-class="{liked:task.beverageLiked==false}" class="btn btn-default btn-sm">
     <span class="glyphicon glyphicon-thumbs-down"></span> Don't Like</button>
     <br><br>
 
@@ -69,5 +69,6 @@
   </div>
   <div class="text-center">
     <button ng-click="submitTask()" class="btn btn-default btn-primary">SAVE</button>
+    <a ng-href="#!/task-list"><button class="btn btn-default btn-primary">BACK</button></a>
   </div>
 </form>
