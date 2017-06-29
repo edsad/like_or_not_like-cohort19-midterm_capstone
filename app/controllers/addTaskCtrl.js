@@ -14,6 +14,7 @@ let user = AuthFactory.getUser();
     info: "",
     mealLiked: "",
     beverageLiked: "",
+    img: "",
     uid: user
   };
 

@@ -3,9 +3,26 @@
 	<h3>{{task.task}}</h3>
   <ul class="list-group">
 
-    <li class="list-group-item"><strong>What Did I Eat? </strong>{{task.meal}}  <span ng-if="task.mealLiked==true"><span class="glyphicon glyphicon-thumbs-up custom"></span></span><span ng-if="task.mealLiked==false"><span class="glyphicon glyphicon-thumbs-down custom"></span></span></li>
+    <li class="list-group-item"><strong>What Did I Eat? </strong>{{task.meal}}  <span ng-if="task.mealLiked==true">
+<!--     <span class="glyphicon glyphicon-thumbs-up custom">
+    </span> -->
+    <img src="http://www.shrimpnfishflorida.com/smiley_face_thumbs_up_answer_1_xlarge.png">
+    </span>
+    <span ng-if="task.mealLiked==false">
+    <img src="http://images.clipartpanda.com/smiley-face-thumbs-down-clipart-aceRqezki.gif">
+<!--     <span class="glyphicon glyphicon-thumbs-down custom"></span> -->
+    </span>
 
-    <li class="list-group-item"><strong>What Did I Drink? </strong>{{task.beverage}}  <span ng-if="task.beverageLiked==true"><span class="glyphicon glyphicon-thumbs-up custom"></span></span><span ng-if="task.beverageLiked==false"><span class="glyphicon glyphicon-thumbs-down custom"></span></span>
+    </li>
+
+    <li class="list-group-item"><strong>What Did I Drink? </strong>{{task.beverage}}  <span ng-if="task.beverageLiked==true">
+    <img src="http://www.shrimpnfishflorida.com/smiley_face_thumbs_up_answer_1_xlarge.png">
+<!--     <span class="glyphicon glyphicon-thumbs-up custom"></span> -->
+    </span>
+    <span ng-if="task.beverageLiked==false">
+    <img src="http://images.clipartpanda.com/smiley-face-thumbs-down-clipart-aceRqezki.gif">
+<!--     <span class="glyphicon glyphicon-thumbs-down custom"></span> -->
+    </span>
     </li>
 
     <li class="list-group-item"><strong>Date: </strong>{{task.date}}</li>
