@@ -1,13 +1,9 @@
 ### cohort 19 mid-term capstone
 
-Like...or Not Like
+Like...or Not
 
  
-Whenever my wife and I go to a restaurant, she always asks me: “Did I like their iced tea here?”, or “What did I get the last time that I liked or didn’t like?” It never fails. Of course I can’t remember either. So is born… the personal Yelp app or Myelp.
- 
 My goal is to make an app that she (or anyone) can record their dining experiences such as, meals ordered, drinks ordered, appetizers, etc., and rate them. I also want to include the time of day and any other special circumstances that might have affected the quality and service.
- 
-I’d like to have an option to include a photo if desired.
  
 USER EXPERIENCE
  
@@ -19,11 +15,7 @@ On my SAVED/PREVIOUS page, I will have info such as: name of restaurant, date, t
  
 On my NEW/CURRENT page, I will have info to add info such as: name of restaurant, date, time of day, meal and drinks. Next to each item will be a thumbs up or thumbs down. There will be a button to edit the info and a place for notes. When I have completed the info, there will be a button to SAVE the info.
  
-I will also be able to add an image if needed or wanted.
- 
-For this project, I will use Angular, Materialize and Firebase.
- 
-As for stretch goals, I would like to use google maps to find the saved restaurants. I’d also like to be able to search through my saved restaurants via the like or not like symbol.
+For this project, I will use Angular, Bootstrap and Firebase.
 
 
 Ed Sadler
